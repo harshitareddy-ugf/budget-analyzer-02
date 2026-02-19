@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body onload="loadDashboard()">
+
+<nav>
+    <a href="profile.html">Profile</a>
+    <button onclick="logout()">Logout</button>
+</nav>
+
+<h2>Dashboard</h2>
+
+<div class="cards">
+    <div class="card income">
+        <h3>Income</h3>
+        <p id="income">0</p>
+    </div>
+    <div class="card expense">
+        <h3>Expense</h3>
+        <p id="expense">0</p>
+    </div>
+    <div class="card balance">
+        <h3>Balance</h3>
+        <p id="balance">0</p>
+    </div>
+</div>
+
+<div class="add-box">
+    <input type="text" id="desc" placeholder="Description">
+    <input type="number" id="amount" placeholder="Amount">
+    <button onclick="addTransaction()">Add</button>
+</div>
+
+<canvas id="chart"></canvas>
+
+<div class="ai-box">
+    <h3>🤖 AI Budget Advice</h3>
+    <p id="aiAdvice">Add transactions to get advice...</p>
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
